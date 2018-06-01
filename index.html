@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- specifies the character encoding for the HTML document -->
+    <meta charset="UTF-8">
+    <!-- varies with the device, and will be smaller on a mobile phone than on a computer screen. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>Classic Acrade Game</title>
+    <!-- game Description -->
+    <meta name="description" content="This is a simple game built. There's a deck of cards with different icons.........etc ">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Image Favicon -->
+    <link rel="shortcut icon" type="images/x-icon" href="images/favicon.png">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader">Loading...</div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="chars">
+        <div class="info">
+
+            <!-- Headind -->
+            <h1>Classic Acrad Game</h1>
+
+            <!-- Heading -->
+            <h2>Choose your character</h2>
+
+            <!-- Choose Character -->
+            <ul onclick="character(event)">
+                <li><img src="images/char-boy.png" alt="char-boy" class="active"></li>
+                <li><img src="images/char-cat-girl.png" alt="char-cat-girl"></li>
+                <li><img src="images/char-horn-girl.png" alt="char-horn-girl"></li>
+                <li><img src="images/char-pink-girl.png" alt="char-pink-girl"></li>
+                <li><img src="images/char-princess-girl.png" alt="char-princess-girl"></li>
+            </ul>
+
+            <!-- Start Game -->
+            <div id="start-game">
+                <!-- Click to start game -->
+                <a class="start-game" onclick="startGame()">Start Game</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Game Area (Canvas) -->
+    <div class="game-area">
+        <div class="game-stats">
+
+            <!-- Hearts -->
+            <div class="game-stats-hearts">
+                <img src="images/Heart.png" alt="heart">
+                <img src="images/Heart.png" alt="heart">
+                <img src="images/Heart.png" alt="heart">
+            </div>
+
+            <!-- Timer -->
+            <div class="game-stats-timer">
+                <img src="images/Timer.png" alt="timer">
+                <span class="game-stats-value">
+                <label class="game-stats-minutes">00</label>:<label class="game-stats-seconds">00</label>
+                </span>
+            </div>
+
+            <!-- Gems -->
+            <div class="game-stats-gems">
+                <img src="images/gem-pixel.png" alt="gem-pixel">
+                <span class="game-stats-value game-stats-gem-count">00/50</span>
+            </div>
+
+            <!-- Reset -->
+            <div class="reset">
+                <!-- Click to reset game -->
+                <span onclick="resetGame()">
+                 <i class="fa fa-2x fa-refresh"></i>
+            </span>
+            </div>
+
+            <!-- Instructions -->
+            <div class="modal">
+                <!-- Modal instructions of how playing game -->
+                <input id="modal-trigger" type="checkbox" />
+                <label for="modal-trigger">
+                <!-- Click to pause game -->
+                <i class="fa fa-2x fa-info" onclick="pauseGame()"></i>
+            </label>
+
+                <div class="modal-overlay" role="dialog" aria-labelledby="modal-title" aria-describedby="modal_desc">
+                    <div class="modal-wrap">
+                        <label for="modal-trigger">
+                        <!-- Click to start game -->
+                        <i class="fa fa-remove" onclick="startGame()"></i>
+                    </label>
+                        <!-- instruction image -->
+                        <img class="info-screen" src="images/start-screen.png" alt="instructions">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gamepad controls -->
+            <div class="gamepad" onclick="controls()">
+                <!-- Click to show and hide controls -->
+                <i class="fa fa-gamepad fa-2x"></i>
+            </div>
+            <!-- Controls -->
+            <div class="arrow-key-container" id="controls" oncontextmenu="return false">
+                <div class="arrow-key up" onclick="return false;" id="up"></div><br>
+                <div class="arrow-key left" onclick="return false;" id="left"></div>
+                <div class="arrow-key down" onclick="return false;" id="down"></div>
+                <div class="arrow-key right" onclick="return false;" id="right"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- This is simply an image loading utility JS -->
+    <script src="js/resources.js"></script>
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+    <!-- File provides the game loop functionality JS -->
+    <script src="js/engine.js"></script>
+</body>
+
+</html>
