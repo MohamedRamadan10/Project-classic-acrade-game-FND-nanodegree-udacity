@@ -23,9 +23,9 @@
 
 #### Extra points
 ---------------------------
-![Gem-Green](images/Gem-Green.png) 
+![Gem-Green](images/gem-green.png) 
 ![Gem-Orange](images/Gem-Orange.png)
-![Gem-Blue](images/Gem-Blue.png) 
+![Gem-Blue](images/gem-blue.png) 
 ![Keys](images/Key.png) 
 ![Stars](images/Star.png) 
 
