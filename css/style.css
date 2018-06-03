@@ -1,5 +1,13 @@
+/**** Font Google ***/
+
+@font-face {
+    font-family: PressStart2P-Regular;
+    src: url('../fonts/PressStart2P-Regular.ttf');
+}
+
+
 body {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'PressStart2P-Regular', cursive;
     background: url('../images/wallpaper.jpg') no-repeat center center/cover;
     height: 100vh;
     padding: 0;
