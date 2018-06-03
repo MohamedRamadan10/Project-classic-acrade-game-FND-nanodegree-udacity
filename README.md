@@ -44,7 +44,6 @@
 - Collect gems, keys and stars
 - Avoid bugs
 - Gems give you extra points
-- Hearts give you extra lifes
 - You win when you collect 50 (gems,keys,stars)
 
 #### Acknowledgements
