@@ -405,16 +405,12 @@
           });
 
       }
+
       const fadeOut = document.querySelector('.start-game'),
           charsParent = document.querySelector('#chars');
       fadeOut.addEventListener("click", function() {
           chars.classList.add("fade-out");
       });
-
-      // Loader before start game
-      window.setTimeout(function() {
-          document.getElementById("loader").style.display = "none";
-      }, 3000);
 
       // Pause Game when info icon is clicked
       function pauseGame() {
@@ -452,3 +448,8 @@
               x.style.display = "block";
           }
       }
+
+ // Loader before start game
+      window.onload = window.setTimeout(function() {
+          document.getElementById("loader").style.display = "none";
+      }, 2000);

@@ -1,6 +1,7 @@
 # Clasic Arcade Game Clone
 ### Screenshots
 ---------------------------
+* [Play Here](http://mohamed-ramadan.comeze.com/Project-classic-arcade-game-FND-nanodegree/index.html)
 ![Choose Character](images/choose-character.png)
 ![Area Game](images/area-game.png)
 ![Instructions](images/instructions.png)
@@ -53,5 +54,7 @@
 * Character & game board sprites are from [PlanetCute Game Prototyping Tiles](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html) by Daniel Cook
 * Sounds are from [Sound Effects Library](https://www.zapsplat.com/sound-effect-category/game-sounds/)
 * Blood splatters are from [pngtree](https://pngtree.com/freepng/crimson-blood_3448735.html)
+* Validate [HTML and CSS](https://validator.w3.org)
+* Validate JS [syntax code](http://esprima.org/demo/validate.html)
 
 

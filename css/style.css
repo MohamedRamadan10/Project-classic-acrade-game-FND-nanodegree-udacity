@@ -7,6 +7,9 @@ body {
     overflow: hidden;
 }
 
+
+/***** When click info icon *****/
+
 .info-screen {
     position: absolute;
     top: 151px;
@@ -19,6 +22,9 @@ body {
 .info-screen-disabled {
     opacity: 0;
 }
+
+
+/***** When win game or loose ******/
 
 .info-modal {
     opacity: 0;
@@ -90,72 +96,8 @@ body {
     background-color: #4aa036;
 }
 
-.game-area {
-    position: relative;
-    text-align: center;
-}
 
-.game-stats {
-    margin: 1em auto 0;
-    font-size: 20px;
-    width: 70%;
-    text-align: right;
-}
-
-.game-stats-hearts {
-    margin-right: .5em;
-}
-
-.game-stats img {
-    width: 30px;
-    margin: 0;
-}
-
-.game-stats-hearts,
-.game-stats-timer,
-.game-stats-gems {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.game-stats-timer,
-.game-stats-gems {
-    margin-left: 15px;
-}
-
-.game-stats-value {
-    margin-left: -10px;
-}
-
-.game-stats-hearts {
-    color: #ff7070;
-}
-
-.game-stats-timer {
-    color: #d1be1e;
-}
-
-.game-stats-timer img,
-.game-stats-gems img {
-    margin-right: .8em;
-}
-
-.game-stats-gems {
-    color: #53d6ee;
-}
-
-
-/************** Add *************/
-
-.info {
-    position: fixed;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 99999;
-}
+/***** Characters ***/
 
 #chars {
     position: fixed;
@@ -225,6 +167,112 @@ h2 {
     -webkit-box-shadow: rgb(199, 192, 130) 0 0px 0px 40px inset;
     box-shadow: rgb(199, 192, 130) 0 0px 0px 40px inset;
 }
+
+
+/******* Area (Canavs) ***/
+
+.game-area {
+    position: relative;
+    text-align: center;
+}
+
+.game-stats {
+    margin: 1em auto 0;
+    font-size: 20px;
+    width: 70%;
+    text-align: right;
+}
+
+.game-stats-hearts {
+    margin-right: .5em;
+}
+
+.game-stats img {
+    width: 30px;
+    margin: 0;
+}
+
+.game-stats-hearts,
+.game-stats-timer,
+.game-stats-gems {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.game-stats-timer,
+.game-stats-gems {
+    margin-left: 15px;
+}
+
+.game-stats-value {
+    margin-left: -10px;
+}
+
+.game-stats-hearts {
+    color: #ff7070;
+}
+
+.game-stats-timer {
+    color: #d1be1e;
+}
+
+.game-stats-timer img,
+.game-stats-gems img {
+    margin-right: .8em;
+}
+
+.game-stats-gems {
+    color: #53d6ee;
+}
+
+.info {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+
+.reset,
+.modal,
+.game-stats-hearts,
+.game-stats-timer,
+.game-stats-gems {
+    display: inline-block;
+}
+
+.reset,
+.modal,
+.gamepad {
+    float: left;
+    margin: 0 1em;
+    font-size: .8em;
+}
+
+.reset .fa,
+.modal .fa,
+.gamepad .fa {
+    cursor: pointer;
+    color: #fff;
+}
+
+.modal-overlay img {
+    width: 100%;
+}
+
+.modal-wrap {
+    position: fixed;
+    width: 80%;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/******** Loader ******/
 
 #loader {
     position: fixed;
@@ -366,42 +414,6 @@ input:checked~.modal-overlay {
     z-index: 800;
 }
 
-.reset,
-.modal,
-.game-stats-hearts,
-.game-stats-timer,
-.game-stats-gems {
-    display: inline-block;
-}
-
-.reset,
-.modal,
-.gamepad {
-    float: left;
-    margin: 0 1em;
-    font-size: .8em;
-}
-
-.reset .fa,
-.modal .fa,
-.gamepad .fa {
-    cursor: pointer;
-    color: #fff;
-}
-
-.modal-overlay img {
-    width: 100%;
-}
-
-.modal-wrap {
-    position: fixed;
-    width: 80%;
-    top: 0;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
 
 /********** Controls *****************/
 
@@ -412,8 +424,8 @@ input:checked~.modal-overlay {
     opacity: .8;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0) scale(.7);
-    bottom: 0;
-    right: 0;
+    bottom: 50px;
+    right: 50px;
 }
 
 .arrow-key {
@@ -478,7 +490,7 @@ input:checked~.modal-overlay {
         left: 50%;
         top: -80%;
         -webkit-transform: translate(-50%, 0%) scale(.35);
-                transform: translate(-50%, 0%) scale(.35);
+        transform: translate(-50%, 0%) scale(.35);
     }
     .arrow-key-container {
         -webkit-transform: translate(-50%, 0) scale(.6);
